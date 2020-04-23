@@ -14,15 +14,6 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-type statusType struct {
-	WholeResult int    `json:"whole_result"`
-	Result      int    `json:"result"`
-	Time        int64  `json:"time"`
-	CurrentCase int    `json:"current_case"`
-	WholeCase   int    `json:"whole_case"`
-	Description string `json:"description"`
-}
-
 var cli *client.Client
 
 func runContainer(data string, conn *websocket.Conn) {
